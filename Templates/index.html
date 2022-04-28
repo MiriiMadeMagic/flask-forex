@@ -1,0 +1,39 @@
+{% extends 'base.html'  %}
+{% block title %} Forex Converter {% endblock %}
+
+{% block content %}
+<h1> Convert Me! </h1>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+   
+    {% for message in messages %}
+      <div> {{ message }} </div>
+    {% endfor %}
+
+  {% endif %}
+{% endwith %}
+
+<form action="/conversion" method="POST" class="row g-3">
+<div class="container-fluid">
+  <div class="mb-3"> 
+    <label for="convert_from" class="form-label" > Convert From </label>
+    <input type="text" class="form-control" placeholder="enter currency abbreviation" name="currency_from">
+  </div>
+
+  <div class="mb-3">
+    <label for="convert_to" class="form-label"> Convert To </label>
+    <input type="text" class="form-control" placeholder="enter currency abbreviation" name="currency_to">
+  </div>
+
+  <div class="mb-3">
+    <label for="amount" class="form-label"> Amount </label>
+    <input type="number" class="form-control" name="amount">
+    <br>
+    <button class="btn btn-success">Convert</button>
+  </div>
+</div>
+
+</form>
+
+{% endblock %}
