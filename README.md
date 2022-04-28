@@ -7,7 +7,7 @@ This is a tiny little forex Converter I made for school a while ago as a way to 
 Some of the highlights of this project include:
 ==============================================
 - Try/Catch error handling
-- Basic testing in unittest test library
+- Basic testing using unittest test library
 - Learning to create focused view functions (each route handles specific functionality)
 
 Note
